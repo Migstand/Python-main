@@ -14,11 +14,22 @@ pergunta = str(input())
 
 if pergunta:
     while True:
-        print("Cadê o trailer?")
-        voz.Speak(random.choice(frases))
+        frase = random.choice(frases)
+        print(frase)
+        voz.Speak(frase)
 
-    
+        justificativa = input()
+        if justificativa.lower() == "fazer depois":
+            print("mentiroso")
+            voz.Speak("Mentiroso")
 
+        if justificativa.lower() == "esqueci":
+            print("aiiinn esqueci")
+            voz.Speak("aiinn esqueci")
+
+        if justificativa.lower() == "ja ja pronto":
+            print("Não tenho mais fé")
+            voz.Speak("Não tenho mais fé")
 
 
 
